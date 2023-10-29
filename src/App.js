@@ -1,12 +1,12 @@
 import Header from "./component/Header";
-
+import Tasks from "./component/Tasks";
 
 const App = () => {
  
   return (
     <div className="container">
-      <Header title={1} />
-       
+      <Header />
+       <Tasks />
     </div>
     
   )
