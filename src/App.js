@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const App = () => {
   
-  const [tasks, setTask] = useState([
+  const [tasks, setTasks] = useState([
     {
         id: 1,
         text: 'Mohamed first Work',
@@ -30,10 +30,21 @@ const App = () => {
         reminder: false,
       }
 ])
+
+  // Delete Task
+
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task)=> task.id !==id))
+  }
+
+// Toggle Reminder
+const toggleReminder = (id) => {
+  setTasks(tasks.map((task)=>task.id))
+}
   return (
     <div className="container">
       <Header />
-       <Tasks tasks={tasks} />
+       {tasks.length > 0 ?  <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : ( 'No task to show') }
     </div>
     
   )
