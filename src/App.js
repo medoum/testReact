@@ -7,30 +7,7 @@ const App = () => {
   const [showAddTask, setShowAddtask] = useState(false);
 
   const [tasks, setTasks] = useState([
-    {
-        id: 1,
-        text: 'Mohamed first Work',
-        day: '23 octobre 2023',
-        reminder: true,
-      },
-      {
-        id: 2,
-        text: 'Mohamed Second Work',
-        day: '24 octobre 2023',
-        reminder: false,
-      },
-      {
-        id: 3,
-        text: 'Mohamed Third Work',
-        day: '25 octobre 2023',
-        reminder: true,
-      },
-      {
-        id: 4,
-        text: 'Mohamed Last Work',
-        day: '26 octobre 2023',
-        reminder: false,
-      }
+   
   ]);
 
   // Add Task
